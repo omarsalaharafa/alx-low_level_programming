@@ -17,7 +17,7 @@ int check_num(char *str)
 	count = 0;
 	while (count < strlen(str)) /*count string*/
 	{
-		if (listdigit(str[count])) /*check if str there are digit */
+		if (isxdigit(str[count])) /*check if str there are digit */
 		{
 			return (0);
 		}
@@ -28,13 +28,13 @@ int check_num(char *str)
 
 /**
  * main - print the name of the program
- * @argc: count of  arguments
- * @argv: the Arguments
+ * @argc: count  arguments
+ * @argv: Arguments
  *
  * Return: Always 0 (success)
 */
 
-int main(int agrc, char *argv[])
+int main(int argc, char *argv[])
 {
 	/*declaring variables*/
 	int count;
